@@ -2,13 +2,21 @@
 # vi: set ft=ruby :
 
 # Usage: ENV=staging vagrant up
+
+VAGRANTFILE_API_VERSION = "2"
+
+require 'json'
+
+localConf = JSON.parse(File.read('VagrantConfig.json'))
+
 environment = "development"
 if ENV["ENV"] && ENV["ENV"] != ''
     environment = ENV["ENV"].downcase
 end
 
-Vagrant.configure("2") do |config|
-
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+    config.vm.provision :shell, :path => "puppet_bootstrap.sh"
+    
     if environment == 'development'
       config.vm.box = "precise64"
       config.vm.box_url = "http://files.vagrantup.com/precise64.box"
@@ -18,12 +26,14 @@ Vagrant.configure("2") do |config|
       config.vm.network :forwarded_port, guest: 10081, host: 10081 # zend http
       config.vm.network :forwarded_port, guest: 10082, host: 10082 # zend https
     
-      config.vm.network :private_network, ip: "192.168.42.70"
+      config.vm.network :private_network, ip: localConf['ipAddress']
     
         config.vm.provider :virtualbox do |vb, override|
+            
             vb.gui = false
-            vb.customize ["modifyvm", :id, "--memory", 512]
+            vb.customize ["modifyvm", :id, "--memory", localConf['vmMemory']]
             vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant-root", "1"]
+            
             config.vm.synced_folder ".", "/vagrant", :group => "www-data"
         end
     
@@ -35,7 +45,9 @@ Vagrant.configure("2") do |config|
             puppet.facter         = {
                 "vagrant"     => true,
                 "environment" => environment,
+                "site_domain" => localConf['siteDomain'],
                 "role"        => "local",
+                "php_version" => localConf['phpVersion']
             }
         end
     end
@@ -45,21 +57,21 @@ Vagrant.configure("2") do |config|
         config.vm.box = "dummy"
 
         config.vm.provider :aws do |aws, override|
-            aws.access_key_id     = "AKIAIG4GFINOWTIQHL7A"
-            aws.secret_access_key = "BzyGOlLdAI/PL8+S0LmJoFxJAnc+o61ahBpaBAt9"
-            aws.instance_type     = "t1.micro"
-            aws.region            = "us-east-1"
-            aws.security_groups   = [ ]
+            aws.access_key_id     = localConf['aws']['accessKey']
+            aws.secret_access_key = localConf['aws']['secretKey']
+            aws.instance_type     = localConf['aws']['instanceType']
+            aws.region            = localConf['aws']['region']
+            aws.security_groups   = localConf['aws']['securityGroups']
             aws.tags              = {
                 "environment" => environment,
                 "role"        => role,
-                "elastic_ip"  => "54.197.236.109",
-                "Name"        => "Google-OAuth2-Demo"
+                "elastic_ip"  => localConf['aws']['elasticIP'],
+                "Name"        => localCOnf['aws']['name']
             }
 
-            aws.region_config "us-east-1" do |region|
-                region.ami          = "ami-d0f89fb9"
-                region.keypair_name = "googleglass"
+            aws.region_config localConf['aws']['region'] do |region|
+                region.ami          = localConf['aws']['ami']
+                region.keypair_name = localConf['aws']['keyPair']
             end
 
             override.ssh.username         = "ubuntu"
@@ -72,8 +84,10 @@ Vagrant.configure("2") do |config|
             puppet.module_path    = "puppet/modules"
             puppet.manifest_file  = "site.pp"
             puppet.facter         = {
+                "site_domain" => localConf['siteDomain'],
                 "environment" => environment,
                 "role"        => role,
+                "php_version" => localConf['phpVersion']
             }
         end
     end

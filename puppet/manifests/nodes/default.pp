@@ -1,31 +1,33 @@
 node default {
     include apt
-    include git
-    include vim
     include stdlib
-    
+
     case $::environment { 
-    	development: {
-    		include app::database
-    		include app::webserver
-    		include app::codebase
-    		
-    		sysctl::value { 'vm.overcommit_memory': value => '1' }
-    		
-    	}
-    	ec2 : {
-    		include app::codebase
-    		include app::webserver
-    		include app::database
-    		include ec2
-    	}
+        development: {
+            include app::database
+            include app::webserver
+            include app::codebase
+            
+            sysctl::value { 'vm.overcommit_memory': value => '1' }
+            
+        }
+        ec2 : {
+            include app::codebase
+            include app::webserver
+            include app::database
+            include ec2
+        }
     }
 
-	package { 'unzip' :
-	   ensure => present
-	}
-	
-    sysctl::value { 'fs.file-max':          value => '100000' }
+    package { 'unzip' :
+       ensure => present
+    }
+
+    package { 'vim' :
+        ensure => present
+    }
+        
+    sysctl::value { 'fs.file-max': value => '100000' }
 
     exec { "apt-get clean" :
       command => "/usr/bin/apt-get clean"

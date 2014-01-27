@@ -1,0 +1,17 @@
+{
+    "ipAddress" : "192.168.42.70",
+    "vmMemory" : "512",
+    "siteDomain" : "dev.example.com",
+    "phpVersion" : "5.4",
+    "aws" : {
+        "accessKey" : "AKIAIG4GFINOWTIQHL7A",
+        "secretKey" : "BzyGOlLdAI/PL8+S0LmJoFxJAnc+o61ahBpaBAt9",
+        "instanceType" : "t1.micro",
+        "region" : "us-east-1",
+        "elasticIP" : "54.197.236.109",
+        "name" : "Google OAuth2",
+        "ami" : "ami-d0f89fb9",
+        "keyPair" : "googleglass",
+        "securityGroups" : []
+    }
+}
