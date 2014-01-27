@@ -1,8 +1,5 @@
 #!/bin/bash
 
-AWS_ACCESS_KEY="AKIAIG4GFINOWTIQHL7A"
-AWS_SECRET_KEY="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"
-
 export EC2_INSTANCE_ID=`curl -s http://169.254.169.254/latest/meta-data/instance-id`
 export EC2_HOME=/usr/local/ec2-api-tools
 export PATH=$PATH:$EC2_HOME/bin
