@@ -1,0 +1,11 @@
+!.gitignore
+.composer
+composer
+zendframework
+autoload.php
+VagrantConfig.json
+.buildpath
+.htaccess
+.project
+.settings
+.vagrant
