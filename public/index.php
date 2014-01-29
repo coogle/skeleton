@@ -10,6 +10,12 @@ if (php_sapi_name() === 'cli-server' && is_file(__DIR__ . parse_url($_SERVER['RE
     return false;
 }
 
+if(isset($_SERVER['APPLICATION_ENV']) && !defined('APPLICATION_ENV')) {
+    define('APPLICATION_ENV', $_SERVER['APPLICATION_ENV']);
+} else if(!defined('APPLICATION_ENV')) {
+    define('APPLICATION_ENV', 'development');
+}
+
 // Setup autoloading
 require 'init_autoloader.php';
 
