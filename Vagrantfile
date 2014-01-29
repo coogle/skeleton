@@ -47,6 +47,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
                 "environment" => environment,
                 "site_domain" => localConf['siteDomain'],
                 "role"        => "local",
+                "awsAccessKey" => localConf['aws']['accessKey'],
+                "awsSecretKey" => localConf['aws']['secretKey'],
                 "php_version" => localConf['phpVersion']
             }
         end
@@ -64,9 +66,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             aws.security_groups   = localConf['aws']['securityGroups']
             aws.tags              = {
                 "environment" => environment,
-                "role"        => role,
                 "elastic_ip"  => localConf['aws']['elasticIP'],
-                "Name"        => localCOnf['aws']['name']
+                "Name"        => localConf['aws']['name']
             }
 
             aws.region_config localConf['aws']['region'] do |region|
@@ -75,7 +76,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             end
 
             override.ssh.username         = "ubuntu"
-            override.ssh.private_key_path = "~/.ssh/googleglass.pem"
+            override.ssh.private_key_path = "~/.ssh/appdemos.pem"
         end
 
         config.vm.provision :puppet do |puppet|
@@ -86,7 +87,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             puppet.facter         = {
                 "site_domain" => localConf['siteDomain'],
                 "environment" => environment,
-                "role"        => role,
+                "aws_access_key" => localConf['aws']['accessKey'],
+                "aws_secret_key" => localConf['aws']['secretKey'],
                 "php_version" => localConf['phpVersion']
             }
         end

@@ -1,6 +1,7 @@
 node default {
     include apt
     include stdlib
+    include git
 
     case $::environment { 
         development: {

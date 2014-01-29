@@ -12,23 +12,6 @@ class app::webserver {
         use_ce => false
     }
     
-    case $::environment {
-        ec2: {
-            #file { "/usr/local/bin/aws_assign_ip.sh" : 
-            #    source => "puppet:///modules/app/ec2/aws_assign_ip.sh",
-            #    owner => root,
-            #    group => root,
-            #    mode => 744,
-            #    require => [ Class['ec2_tools'] ]
-            #}
-         
-            #exec { 'Assign Elastic IP' :
-            #    command => "/usr/local/bin/aws_assign_ip.sh",
-            #    require => [ Class['ec2_tools'], File['/usr/local/bin/aws_assign_ip.sh'] ]
-            #}
-        }
-    }
-    
     file { "/usr/local/bin/pear" : 
         target => '/usr/local/zend/bin/pear',
         ensure => 'link',
@@ -39,7 +22,9 @@ class app::webserver {
         docroot  => "/vagrant/public",
         ssl      => true,
         priority => '000',
-        template => 'app/apache/virtualhost/vhost.conf.erb',
+        env_variables => [
+            "APPLICATION_ENV $::environment"
+        ],
         require => [ Package['apache'] ]
     }
     
@@ -63,9 +48,5 @@ class app::webserver {
         onlyif  => "test -L ${apache::params::config_dir}/sites-enabled/000-default",
         notify  => Service['apache'],
         require => Package['apache'],
-    }
-
-    package { 'git':
-       ensure => present
     }
 }

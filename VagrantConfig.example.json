@@ -4,14 +4,14 @@
     "siteDomain" : "dev.example.com",
     "phpVersion" : "5.4",
     "aws" : {
-        "accessKey" : "AKIAIG4GFINOWTIQHL7A",
-        "secretKey" : "BzyGOlLdAI/PL8+S0LmJoFxJAnc+o61ahBpaBAt9",
+        "accessKey" : "",
+        "secretKey" : "",
         "instanceType" : "t1.micro",
         "region" : "us-east-1",
-        "elasticIP" : "54.197.236.109",
-        "name" : "Google OAuth2",
+        "elasticIP" : "",
+        "name" : "Skeleton",
         "ami" : "ami-d0f89fb9",
-        "keyPair" : "googleglass",
+        "keyPair" : "example",
         "securityGroups" : []
     }
 }
