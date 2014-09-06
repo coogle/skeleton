@@ -4,13 +4,15 @@ node default {
     include git
 
     case $::environment { 
+    	production: {
+    	    include app::database
+            include app::webserver
+            include app::codebase
+    	}
         development: {
             include app::database
             include app::webserver
             include app::codebase
-            
-            sysctl::value { 'vm.overcommit_memory': value => '1' }
-            
         }
         ec2 : {
             include app::codebase
@@ -28,8 +30,6 @@ node default {
         ensure => present
     }
         
-    sysctl::value { 'fs.file-max': value => '100000' }
-
     exec { "apt-get clean" :
       command => "/usr/bin/apt-get clean"
     }
