@@ -18,14 +18,18 @@ class app::webserver {
         require => [ Class['zendserver'] ]
     }
 
-    apache::vhost { $::site_domain :
+	file { "/vagrant/public" :
+		ensure => directory
+	}
+	
+    apache::vhost { 'development' :
         docroot  => "/vagrant/public",
         ssl      => true,
         priority => '000',
         env_variables => [
             "APPLICATION_ENV $::environment"
         ],
-        require => [ Package['apache'] ]
+        require => [ Package['apache'], File['/vagrant/public'] ]
     }
     
     exec { "bootstrap-zs-server" :
