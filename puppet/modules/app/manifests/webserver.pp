@@ -8,7 +8,7 @@ class app::webserver {
     class { 'apache': }
     
     class { 'zendserver':
-        php_version => $::php_version,
+        php_version => "5.4",
         use_ce => false
     }
     

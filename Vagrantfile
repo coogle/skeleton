@@ -32,9 +32,22 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             
             vb.gui = false
             vb.customize ["modifyvm", :id, "--memory", localConf['vmMemory']]
+            vb.customize ["modifyvm", :id, "--cpuexecutioncap", "90"]
             vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant-root", "1"]
-            
-            config.vm.synced_folder ".", "/vagrant", :group => "www-data"
+
+
+            host = RbConfig::CONFIG['host_os']
+
+            if host =~ /darwin/
+               cpus = `sysctl -n hw.ncpu`.to_i
+            elsif host =~ /linux/
+               cpus = `nproc`.to_i
+            else
+               cpus = 2
+            end
+
+            vb.customize ["modifyvm", :id, "--cpus", cpus]
+            config.vm.synced_folder ".", "/vagrant",  nfs: true    
         end
     
         config.vm.provision :puppet do |puppet|
