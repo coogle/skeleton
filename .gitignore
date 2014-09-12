@@ -4,6 +4,7 @@ composer
 zendframework
 autoload.php
 VagrantConfig.json
+/vendor
 .buildpath
 .htaccess
 .project
