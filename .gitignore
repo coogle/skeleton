@@ -2,7 +2,6 @@
 .composer
 composer
 zendframework
-autoload.php
 VagrantConfig.json
 /vendor
 .buildpath
