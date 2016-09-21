@@ -2,8 +2,10 @@
 .composer
 composer
 zendframework
+.env
 autoload.php
 VagrantConfig.json
+vendor/*
 .buildpath
 .htaccess
 .project
