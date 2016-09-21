@@ -8,6 +8,15 @@ class app::codebase {
      mode => 775,
      source => "puppet:///modules/app/config/$::environment/public/.htaccess"
   }
+  
+  exec { "Installing From Composer" :
+  	 command => "/usr/local/bin/composer install",
+  	 cwd => "/vagrant",
+  	 user => 'vagrant',
+  	 environment => ['HOME=/home/vagrant'],
+  	 timeout => 0
+  }
+  	 
 
   file { "/vagrant/.env" :
   	 group => "www-data",
@@ -36,7 +45,7 @@ class app::codebase {
   	 unless => "/usr/bin/test -f /vagrant/.puppet-key-generated",
   	 before => File["/vagrant/.puppet-key-generated"],
   	 command => '/usr/bin/php artisan key:generate',
-  	 require => [ Class['::php'] ]
+  	 require => [ Class['::php'], Exec["Installing From Composer"] ]
   }
   
   file { "/vagrant/.puppet-key-generated" :
