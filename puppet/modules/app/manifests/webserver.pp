@@ -26,7 +26,37 @@ class app::webserver {
 		settings => {
 			'Date/date.timezone' => $::timezone
 		},
-		require => [ Package['software-properties-common'], Class['apache'] ]
+		require => [ Package['software-properties-common'], Class['apache'] ],
+		extensions => {
+			mbstring => {},
+			opcache => {},
+			pdo => {},
+			calendar => {},
+			ctype => {},
+			dom => {},
+			exif => {},
+			fileinfo => {},
+			ftp => {},
+			gettext => {},
+			iconv => {},
+			json => {},
+			phar => {},
+			posix => {},
+			readline => {},
+			shmop => {},
+			simplexml => {},
+			sockets => {},
+			sysvmsg => {},
+			sysvsem => {},
+			sysvshm => {},
+			tokenizer => {},
+			wddx => {},
+			xmlreader => {},
+			xmlwriter => {},
+			xsl => {},
+			tidy => {},
+			mcrypt => {}
+		}
 	}
 	    
 	file { "/vagrant/public" :
