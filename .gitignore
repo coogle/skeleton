@@ -1,4 +1,5 @@
 !.gitignore
+.puppet-key-generated
 .composer
 composer
 zendframework

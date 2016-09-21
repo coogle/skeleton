@@ -31,6 +31,7 @@ class app::webserver {
 			mbstring => {},
 			opcache => {},
 			pdo => {},
+			mysql => {},
 			calendar => {},
 			ctype => {},
 			dom => {},

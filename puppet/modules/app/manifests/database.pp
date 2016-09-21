@@ -8,6 +8,12 @@ class app::database {
   	 user => $::dbuser,
   	 password => $::dbpass,
   	 host => 'localhost',
- }
+  }
+  
+  exec { "migrate application db" :
+  	 command => "/usr/bin/php artisan migrate",
+  	 cwd => "/vagrant",
+  	 require => [ Class['::php'] ]
+  }
   	 
 }

@@ -45,7 +45,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             end
 
             vb.customize ["modifyvm", :id, "--cpus", cpus]
-            config.vm.synced_folder ".", "/vagrant",  nfs: true    
+            config.vm.synced_folder ".", "/vagrant",  nfs: true
         end
     
         config.vm.provision :puppet do |puppet|
