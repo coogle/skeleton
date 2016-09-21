@@ -14,7 +14,8 @@ class app::codebase {
   	 cwd => "/vagrant",
   	 user => 'vagrant',
   	 environment => ['HOME=/home/vagrant'],
-  	 timeout => 0
+  	 timeout => 0,
+  	 require => [ Class['::php'] ]
   }
   	 
 

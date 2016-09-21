@@ -13,7 +13,7 @@ class app::database {
   exec { "migrate application db" :
   	 command => "/usr/bin/php artisan migrate",
   	 cwd => "/vagrant",
-  	 require => [ Class['::php'] ]
+  	 require => [ Class['::php'], Exec["Installing From Composer"] ]
   }
   	 
 }
