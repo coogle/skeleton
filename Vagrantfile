@@ -18,13 +18,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.provision :shell, :path => "puppet_bootstrap.sh"
     
     if environment == 'development'
-      config.vm.box = "precise64"
-      config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+      config.vm.box = "gbarbieru/xenial"
+      config.vm.box_url = "https://atlas.hashicorp.com/gbarbieru/boxes/xenial"
     
       config.vm.network :forwarded_port, guest: 80,    host: 10080    # apache http
       config.vm.network :forwarded_port, guest: 3306,  host: 3306  # mysql
-      config.vm.network :forwarded_port, guest: 10081, host: 10081 # zend http
-      config.vm.network :forwarded_port, guest: 10082, host: 10082 # zend https
     
       config.vm.network :private_network, ip: localConf['ipAddress']
     
@@ -58,6 +56,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             puppet.facter         = {
                 "vagrant"     => true,
                 "environment" => environment,
+                "dbuser" => localConf['dbuser'],
+                "dbpass" => localConf['dbpass'],
+                "dbname" => localConf['dbname'],
                 "site_domain" => localConf['siteDomain'],
                 "role"        => "local",
                 "awsAccessKey" => localConf['aws']['accessKey'],

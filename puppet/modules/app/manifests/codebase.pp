@@ -9,9 +9,4 @@ class app::codebase {
      source => "puppet:///modules/app/config/$::environment/public/.htaccess"
   }
   
-  composer::exec { 'update-codebase' :
-    cmd => "update",
-    cwd => "/vagrant",
-    logoutput => true
-  }
 }

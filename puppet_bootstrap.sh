@@ -2,6 +2,7 @@
 
 if [ -e /var/local/puppet-bootstrapped ] ; then
     echo "Skipping puppet bootstrap as it appears to already have been done."
+    echo "Remove /var/local/puppet-bootstrapped in VM to re-provision puppet modules."
     exit 0
 fi
 
@@ -10,7 +11,7 @@ if [ "$EUID" -ne "0" ] ; then
     exit 1
 fi
 
-wget -O /tmp/puppetlabs-release-precise.deb https://apt.puppetlabs.com/puppetlabs-release-precise.deb
+wget -O /tmp/puppetlabs-release-precise.deb https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb
 dpkg -i /tmp/puppetlabs-release-precise.deb
 
 apt-get update
@@ -18,23 +19,12 @@ apt-get install puppet -y
 
 mkdir -p /etc/puppet/modules
 
-if which puppet > /dev/null ; then
-
-    puppet module install puppetlabs/git
-    puppet module install  example42/puppi
-    puppet module install  example42/apt
-    puppet module install  example42/apache
-    puppet module install  example42/sysctl
-    puppet module install  example42/vim
-
-    puppet module install  puppetlabs/gcc
-    puppet module install  puppetlabs/vcsrepo
-    puppet module install  puppetlabs/mysql
+if which gem > /dev/null ; then
+    /usr/bin/gem install r10k
+    apt-get install git -y
     
-    puppet module install  maestrodev/wget
-    puppet module install  tPl0ch/composer
-    puppet module install  evenup/ec2_tools
-    
+    cd /vagrant
+    r10k puppetfile install
 fi
 
 touch /var/local/puppet-bootstrapped

@@ -1,0 +1,18 @@
+moduledir '/etc/puppet/modules'
+
+mod 'puppetlabs/git'
+mod 'puppetlabs/stdlib'
+mod 'puppetlabs/inifile'
+mod 'example42/puppi'
+mod 'puppetlabs/apt'
+mod 'puppetlabs/concat'
+mod 'puppetlabs/apache'
+mod 'example42/sysctl'
+mod 'example42/vim'
+mod 'puppetlabs/gcc'
+mod 'puppetlabs/vcsrepo'
+mod 'puppetlabs/mysql'
+mod 'maestrodev/wget'
+mod 'evenup/ec2_tools'
+mod 'mayflower/php',
+	:git => 'https://github.com/voxpupuli/puppet-php.git'
