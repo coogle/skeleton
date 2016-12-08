@@ -3,6 +3,9 @@
     "vmMemory" : "512",
     "siteDomain" : "dev.example.com",
     "phpVersion" : "5.4",
+    "dbuser" : "www-data",
+    "dbpass" : "password",
+    "dbname" : "dn",
     "aws" : {
         "accessKey" : "",
         "secretKey" : "",
