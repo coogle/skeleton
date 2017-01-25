@@ -14,5 +14,7 @@ mod 'puppetlabs/vcsrepo'
 mod 'puppetlabs/mysql'
 mod 'maestrodev/wget'
 mod 'evenup/ec2_tools'
+mod 'voxpupuli/archive',
+	:git => 'https://github.com/voxpupuli/puppet-archive.git'
 mod 'mayflower/php',
 	:git => 'https://github.com/voxpupuli/puppet-php.git'
