@@ -18,8 +18,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.provision :shell, :path => "puppet_bootstrap.sh"
     
     if environment == 'development'
-      config.vm.box = "gbarbieru/xenial"
-      config.vm.box_url = "https://atlas.hashicorp.com/gbarbieru/boxes/xenial"
+      config.vm.box = "geerlingguy/ubuntu1604"
+      config.vm.box_url = "https://atlas.hashicorp.com/geerlingguy/boxes/ubuntu1604/"
     
       config.vm.network :forwarded_port, guest: 80,    host: 10080    # apache http
       config.vm.network :forwarded_port, guest: 3306,  host: 3306  # mysql
@@ -50,9 +50,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     
         config.vm.provision :puppet do |puppet|
             puppet.options        = "--verbose --debug"
-            puppet.manifests_path = "puppet/manifests"
-            puppet.module_path    = "puppet/modules"
-            puppet.manifest_file  = "site.pp"
+#            puppet.manifests_path = "puppet/manifests"
+#            puppet.module_path    = "puppet/modules"
+#            puppet.manifest_file  = "site.pp"
+            puppet.environment_path = "puppet-env"
+            puppet.environment = "dev"
             puppet.facter         = {
                 "vagrant"     => true,
                 "environment" => environment,
