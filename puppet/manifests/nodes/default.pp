@@ -2,7 +2,6 @@ node default {
     include apt
     include stdlib
     include git
-
     include app::database
     include app::webserver
     include app::codebase

@@ -2,7 +2,7 @@
     "ipAddress" : "192.168.42.70",
     "vmMemory" : "512",
     "siteDomain" : "dev.example.com",
-    "phpVersion" : "7.0",
+    "phpVersion" : "7.1",
     "dbuser" : "www-data",
     "dbpass" : "password",
     "dbname" : "skeleton",

@@ -5,7 +5,7 @@ class app::codebase {
   file { "/vagrant/public/.htaccess" :
      group => "www-data",
      owner => "root",
-     mode => '775',
+     mode => 775,
      source => "puppet:///modules/app/config/$::environment/public/.htaccess"
   }
   
@@ -21,7 +21,7 @@ class app::codebase {
 
   file { "/vagrant/.env" :
   	 group => "www-data",
-  	 mode => '775',
+  	 mode => 775,
   	 content => template("app/laravel-env.erb"),
   	 ensure => present,
   	 replace => 'no'
@@ -29,7 +29,7 @@ class app::codebase {
   
   file { "/vagrant/storage" :
   	 group => "www-data",
-  	 mode => '775',
+  	 mode => 775,
      recurse => true,
      ensure => directory
   }
@@ -37,7 +37,7 @@ class app::codebase {
   file { "/vagrant/bootstrap/cache" :
   	 ensure => directory,
   	 group => "www-data",
-  	 mode => '775',
+  	 mode => 775,
   	 recurse => true
   }
   	 

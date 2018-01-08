@@ -10,6 +10,12 @@ class app::database {
   	 host => 'localhost',
   }
   
+  mysql::db { 'testnotice-testing' :
+    user => $::dbuser,
+    password => $::dbpass,
+    host => 'localhost'
+  }
+  
   exec { "migrate application db" :
   	 command => "/usr/bin/php artisan migrate",
   	 cwd => "/vagrant",

@@ -1,0 +1,9 @@
+[program:laravel-worker]
+process_name=%(program_name)s_%(process_num)02d
+command=/usr/bin/php /vagrant/artisan queue:work sqs --sleep=3 --tries=1 --queue=notifications,high,normal
+autostart=true
+autorestart=true
+user=www-data
+numprocs=8
+redirect_stderr=true
+stdout_logfile=/vagrant/storage/logs/worker.log

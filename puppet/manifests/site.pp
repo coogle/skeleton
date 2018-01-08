@@ -14,4 +14,4 @@ Exec { logoutput => true, path => [
     '/usr/local/zend/bin',
 ], }
 
-#import 'nodes/*.pp'
+import 'nodes/*.pp'

@@ -11,11 +11,11 @@ if [ "$EUID" -ne "0" ] ; then
     exit 1
 fi
 
-wget https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb
-dpkg -i puppetlabs-release-pc1-xenial.deb
+wget -O /tmp/puppetlabs-release-precise.deb https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb
+dpkg -i /tmp/puppetlabs-release-precise.deb
+
 apt-get update
-apt-get install puppetserver -y
-apt-get install rubygems -y
+apt-get install puppet -y
 
 mkdir -p /etc/puppet/modules
 

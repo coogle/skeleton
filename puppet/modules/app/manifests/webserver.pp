@@ -1,7 +1,47 @@
 class app::webserver {
+
+    package { 'supervisor':
+      ensure => present
+    }
+    
+    class { 'elasticsearch':
+      java_install => true,
+      manage_repo  => true,
+      repo_version => '5.x',
+      init_defaults => {
+        'ES_JAVA_OPTS' => hiera('profile_elasticsearch::elasticsearch::es_java_opts','"-Xms128m -Xmx128m"')
+      }
+    }
+
+    elasticsearch::instance { 'es-01': }
+    
+    cron { "laravel-scheduler":
+      command => '/usr/bin/php /vagrant/artisan schedule:run >> /dev/null 2>&1',
+      user => 'www-data',
+    }
+    
+    
+    service { "supervisor" :
+      ensure => 'running',
+      enable => true,
+      require => Package['supervisor']
+    }
+    
+#    class { 'nodejs' :
+#      repo_url_suffix => '6.x'
+#    }
+
+    file { "/etc/supervisor/conf.d/laravel-worker.conf" :
+      mode => 755,
+      content => template("app/laravel-worker.erb"),
+      ensure => present,
+      replace => 'yes',
+      require => Package['supervisor'],
+      notify => Service['supervisor']
+    }
     
     class { 'apache': 
-    	default_vhost => false
+      	default_vhost => false
     }
     
     apache::mod { 'proxy': }
@@ -9,11 +49,11 @@ class app::webserver {
     apache::mod { 'rewrite': }
     
     package { 'software-properties-common' :
-    	ensure => present
+    	   ensure => present
    	}
 	
 	class { '::php::globals':
-		php_version => '7.0'
+		php_version => $::php_version
 	}->
 	class { '::php':
 		ensure	=> latest,
@@ -28,11 +68,12 @@ class app::webserver {
 		},
 		require => [ Package['software-properties-common'], Class['apache'] ],
 		extensions => {
+		  gd => {},
 			mbstring => {},
-			opcache => {},
 			pdo => {},
-			mysql => {},
+			"pdo-mysql" => {},
 			calendar => {},
+			curl => {},
 			ctype => {},
 			dom => {},
 			exif => {},
@@ -82,6 +123,6 @@ class app::webserver {
         content => "export APPLICATION_ENV=$::environment",
         owner => root,
         group => root,
-        mode => '755'
+        mode => 755
     }
 }
