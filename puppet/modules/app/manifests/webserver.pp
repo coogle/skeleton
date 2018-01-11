@@ -27,9 +27,9 @@ class app::webserver {
       require => Package['supervisor']
     }
     
-#    class { 'nodejs' :
-#      repo_url_suffix => '6.x'
-#    }
+    class { 'nodejs' :
+      repo_url_suffix => '8.x'
+    }
 
     file { "/etc/supervisor/conf.d/laravel-worker.conf" :
       mode => 755,
