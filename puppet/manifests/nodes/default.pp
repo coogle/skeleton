@@ -6,6 +6,10 @@ node default {
     include app::webserver
     include app::codebase
 
+    package { 'apt-transport-https' :
+       ensure => present
+    }
+
     package { 'unzip' :
        ensure => present
     }
