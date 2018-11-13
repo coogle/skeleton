@@ -2,7 +2,7 @@
     "ipAddress" : "192.168.42.70",
     "vmMemory" : "512",
     "siteDomain" : "dev.example.com",
-    "phpVersion" : "5.4",
+    "phpVersion" : "7.1",
     "aws" : {
         "accessKey" : "",
         "secretKey" : "",
