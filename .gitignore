@@ -4,6 +4,7 @@ composer
 zendframework
 VagrantConfig.json
 /vendor
+public/wp-config.php
 .buildpath
 .htaccess
 .project

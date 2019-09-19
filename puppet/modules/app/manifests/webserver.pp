@@ -3,18 +3,7 @@ class app::webserver {
     package { 'supervisor':
       ensure => present
     }
-    
-    class { 'elasticsearch':
-      java_install => true,
-      manage_repo  => true,
-      repo_version => '5.x',
-      init_defaults => {
-        'ES_JAVA_OPTS' => hiera('profile_elasticsearch::elasticsearch::es_java_opts','"-Xms128m -Xmx128m"')
-      }
-    }
-
-    elasticsearch::instance { 'es-01': }
-    
+     
     service { "supervisor" :
       ensure => 'running',
       enable => true,
@@ -108,6 +97,6 @@ class app::webserver {
         content => "export APPLICATION_ENV=$::environment",
         owner => root,
         group => root,
-        mode => 755
+        mode => "755"
     }
 }

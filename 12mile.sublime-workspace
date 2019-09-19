@@ -1,0 +1,548 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"instituti",
+				"institution_count"
+			],
+			[
+				"stor",
+				"storedImage"
+			],
+			[
+				"section",
+				"section_defs_file"
+			],
+			[
+				"employeeGro",
+				"employeeGroups"
+			],
+			[
+				"institution_b",
+				"institution_bargaining_unit_employment_groups"
+			],
+			[
+				"inst",
+				"institution_id"
+			],
+			[
+				"Employ",
+				"EmploymentGroup"
+			],
+			[
+				"nationa",
+				"nationalData"
+			],
+			[
+				"median",
+				"medianData"
+			],
+			[
+				"media",
+				"medianData"
+			],
+			[
+				"institution",
+				"institution_id"
+			],
+			[
+				"instit",
+				"institution_two"
+			],
+			[
+				"instint",
+				"institution"
+			],
+			[
+				"insti",
+				"institution_two"
+			],
+			[
+				"mark",
+				"markdown_en"
+			],
+			[
+				"has",
+				"hasRole"
+			],
+			[
+				"delete",
+				"deleteGroup"
+			],
+			[
+				"instutti",
+				"institutionGroups"
+			],
+			[
+				"instA",
+				"instAData"
+			],
+			[
+				"instB",
+				"instBData"
+			],
+			[
+				"generate",
+				"generateDataSetFromQuery"
+			],
+			[
+				"average",
+				"average_salary"
+			],
+			[
+				"med",
+				"median_salary"
+			],
+			[
+				"institut",
+				"institutions"
+			],
+			[
+				"barga",
+				"bargaining_units"
+			],
+			[
+				"bargin",
+				"bargainingUnits"
+			],
+			[
+				"barg",
+				"bargainingUnit"
+			],
+			[
+				"bar",
+				"bargainingUnit"
+			],
+			[
+				"Agreement",
+				"AgreementUploaded"
+			],
+			[
+				"AgreementUp",
+				"AgreementUploadedListener"
+			],
+			[
+				"STATUS",
+				"STATUS_RATIFIED"
+			],
+			[
+				"Dashboard",
+				"DashboardNotification"
+			],
+			[
+				"jobStatus",
+				"jobStatusId"
+			],
+			[
+				"onScro",
+				"onScrollRightClick"
+			],
+			[
+				"jobSt",
+				"jobStatusId"
+			],
+			[
+				"defa",
+				"default_filename"
+			],
+			[
+				"Institution",
+				"Institution"
+			],
+			[
+				"setupM",
+				"setupMQTTi"
+			],
+			[
+				"get",
+				"getHeapFragmentation"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/User/esp8266.sublime-build",
+					""
+				],
+				[
+					"Packages/User/esp8266.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/User/esp8266.sublime-build",
+					"Flash"
+				]
+			],
+			[
+				"Packages/User/esp8266.sublime-build",
+				"Flash"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/User/esp8266.sublime-build",
+					""
+				],
+				[
+					"Packages/User/esp8266.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/User/esp8266.sublime-build",
+					"Flash"
+				]
+			],
+			[
+				"Packages/User/esp8266.sublime-build",
+				"Flash"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/esp8266.sublime-build",
+					""
+				],
+				[
+					"Packages/User/esp8266.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/User/esp8266.sublime-build",
+					"Flash"
+				],
+				[
+					"Packages/User/esp8266.sublime-build",
+					"Stack Dump"
+				]
+			],
+			[
+				"Packages/User/esp8266.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Volumes/12Mile/site"
+	],
+	"file_history":
+	[
+		"/Volumes/FBS-V3/fbs/resources/views/layouts/public/footer.blade.php",
+		"/Volumes/FBS-V3/fbs/resources/views/institution/library/search/results.blade.php",
+		"/Volumes/FBS-V3/fbs/resources/views/layouts/public.blade.php",
+		"/Volumes/FBS-V3/fbs/resources/views/layouts/simple.blade.php",
+		"/Volumes/FBS-V3/fbs/resources/views/layouts/app.blade.php",
+		"/Volumes/FBS-V3/fbs/resources/views/public/training.blade.php",
+		"/Volumes/FBS-V3/fbs/resources/views/public/about/field-officers.blade.php",
+		"/Volumes/FBS-V3/fbs/resources/views/institution/my-account/edit.blade.php",
+		"/Volumes/FBS-V3/fbs/resources/views/institution/dashboard/news.blade.php",
+		"/Volumes/FBS-V3/fbs/app/Database/Seeders/EmploymentGroups.php",
+		"/Volumes/FBS-V3/fbs/resources/views/institution/library/upload.blade.php",
+		"/Volumes/FBS-V3/fbs/app/Console/Commands/ImportTranslations.php",
+		"/Volumes/FBS-V3/fbs/resources/assets/js/app.js",
+		"/Volumes/FBS-V3/fbs/resources/views/institution/dashboard/conversations.blade.php",
+		"/Volumes/FBS-V3/fbs/resources/assets/js/vue-i18n-locales.generated.json",
+		"/Volumes/FBS-V3/fbs/app/Reports/Salaries/NewFloorsAndCeilings.php",
+		"/Volumes/FBS-V3/fbs/resources/views/institution/dashboard/social.blade.php",
+		"/Volumes/FBS-V3/fbs/resources/views/institution/library/search/index.blade.php",
+		"/Volumes/FBS-V3/fbs/database/migrations/2019_06_13_153457_add_abu_status_and_agreement_id.php",
+		"/Volumes/FBS-V3/fbs/app/Console/Commands/ImportUsersCommand.php",
+		"/Volumes/FBS-V3/fbs/resources/views/institution/library/publications/index.blade.php",
+		"/Volumes/FBS-V3/fbs/resources/views/institution/library/agreements/upload/index.blade.php",
+		"/Volumes/FBS-V3/fbs/resources/views/institution/library/agreements/meta-wizard/done.blade.php",
+		"/Volumes/FBS-V3/fbs/resources/views/institution/library/agreements/meta-wizard/2.blade.php",
+		"/Volumes/FBS-V3/fbs/resources/views/institution/library/agreements/meta-wizard/1.blade.php",
+		"/Volumes/FBS-V3/fbs/app/Http/Controllers/Institution/Library/SearchController.php",
+		"/Volumes/FBS-V3/fbs/app/Elasticsearch/QueryBuilder.php",
+		"/Volumes/FBS-V3/fbs/resources/assets/js/vue-i18n-locales.generated.js",
+		"/Volumes/FBS-V3/fbs/webpack.mix.js",
+		"/Volumes/FBS-V3/fbs/config/vue-i18n-generator.php",
+		"/Volumes/FBS-V3/fbs/resources/assets/js/components/document-search-result.vue",
+		"/Volumes/FBS-V3/fbs/resources/assets/js/components/my-account/inst-group-list-item.vue",
+		"/Volumes/FBS-V3/fbs/resources/assets/js/components/institution-dashboard/legal-rulings.vue",
+		"/Volumes/FBS-V3/fbs/resources/assets/js/components/institution-dashboard/institution-contacts.vue",
+		"/Volumes/FBS-V3/fbs/resources/assets/js/components/institution-dashboard/bargaining-units.vue",
+		"/Volumes/FBS-V3/fbs/resources/views/public/about/governance.blade.php",
+		"/Volumes/FBS-V3/fbs/app/Models/Document.php",
+		"/Volumes/FBS-V3/fbs/app/Console/Commands/AssignFieldOfficersCommand.php",
+		"/Volumes/FBS-V3/fbs/resources/views/institution/dashboard/field-officer.blade.php",
+		"/Volumes/FBS-V3/fbs/resources/views/public/index.blade.php",
+		"/Volumes/FBS-V3/fbs/resources/views/public/about/staff.blade.php",
+		"/Volumes/FBS-V3/fbs/app/Http/Controllers/AboutController.php",
+		"/Volumes/FBS-V3/fbs/app/Models/User.php",
+		"/Volumes/FBS-V3/fbs/app/Console/Commands/ImportAgreementsFromCsvCommand.php",
+		"/Volumes/FBS-V3/fbs/app/Jobs/Documents/CreateDocumentSections.php",
+		"/Volumes/FBS-V3/fbs/app/Notifications/BUStatusChanged.php",
+		"/Volumes/FBS-V3/fbs/app/Models/Agreement.php",
+		"/Volumes/FBS-V3/fbs/app/Models/Institution/BargainingUnit.php",
+		"/Volumes/FBS-V3/fbs/app/Http/Controllers/Institution/Library/UploadController.php",
+		"/Volumes/FBS-V3/fbs/app/Models/Document/Section.php",
+		"/Volumes/FBS-V3/fbs/app/Models/Institution.php",
+		"/Users/john/Downloads/RV-Window-Widget.gco",
+		"/Users/john/Downloads/CFFFP_PlaystationEyeV3.gcode",
+		"/Volumes/FBS-V3/fbs/app/Database/Seeders/Document/AvailableTags.php",
+		"/Volumes/FBS-V3/fbs/database/migrations/2019_09_11_044335_add_doc_employment_group_ref.php",
+		"/Users/john/Downloads/repository.exodusredux/addon.xml",
+		"/Volumes/FBS-V3/fbs/app/Database/Seeders/Regions.php",
+		"/Volumes/FBS-V3/fbs/app/Reports/Salaries/Charts/AcrossTheBoardIncreases.php",
+		"/Volumes/FBS-V3/fbs/app/Reports/Salaries/AcrossTheBoardIncreases.php",
+		"/Volumes/FBS-V3/fbs/routes/api.php",
+		"/Volumes/FBS-V3/fbs/resources/views/news/general.blade.php",
+		"/Volumes/FBS-V3/fbs/app/Http/Controllers/Institution/MemberDirectoryController.php",
+		"/Volumes/FBS-V3/fbs/resources/views/institution/member-directory/index.blade.php",
+		"/Volumes/FBS-V3/fbs/app/Database/Seeders/Report/Categories.php",
+		"/Volumes/FBS-V3/fbs/app/Console/Commands/ImportAtbIncreasesNationalReport.php",
+		"/Volumes/FBS-V3/fbs/resources/views/reporting/reports/salaries/atb-increases.blade.php",
+		"/Volumes/FBS-V3/fbs/app/Reports/AbstractReport.php",
+		"/Volumes/FBS-V3/fbs/app/Reports/Salaries/AverageSalariesFullTimeInst.php",
+		"/Volumes/FBS-V3/fbs/app/Reports/Salaries/FloorsAndCeilings.php",
+		"/Volumes/FBS-V3/fbs/app/Models/User/Role.php",
+		"/Volumes/FBS-V3/fbs/database/migrations/2019_09_05_041736_create_reportdata_atb_increases_inst.php",
+		"/Volumes/FBS-V3/fbs/app/Console/Commands/ImportAtbIncreasesReport.php",
+		"/Volumes/FBS-V3/fbs/app/Console/Commands/ImportAvgMedianSalariesReport.php",
+		"/Volumes/FBS-V3/fbs/app/Models/Report/Data/ATBInstIncrease.php",
+		"/Volumes/FBS-V3/fbs/app/Models/Report/Data/AverageSalariesFullTimeInst.php",
+		"/Volumes/FBS-V3/fbs/app/Models/Report/Data/ATBNationalIncrease.php",
+		"/Volumes/FBS-V3/fbs/app/Models/Report/Category.php",
+		"/Volumes/FBS-V3/fbs/resources/views/reporting/reports/base.blade.php",
+		"/Volumes/FBS-V3/fbs/resources/views/reporting/reports/salaries/new-floors-ceilings.blade.php",
+		"/Volumes/FBS-V3/fbs/resources/views/reporting/reports/salaries/average-salaries-full-time-inst.blade.php",
+		"/Volumes/FBS-V3/fbs/app/Reports/Salaries/Charts/NewFloorsAndCeilings.php",
+		"/Volumes/FBS-V3/fbs/app/Models/NewsItem.php",
+		"/Volumes/FBS-V3/fbs/app/Jobs/Internal/PruneNews.php",
+		"/Volumes/FBS-V3/fbs/app/Console/Kernel.php",
+		"/Volumes/FBS-V3/fbs/app/Http/Controllers/Admin/NewsController.php",
+		"/Volumes/FBS-V3/fbs/app/Notifications/NewsItem.php",
+		"/Volumes/FBS-V3/fbs/routes/web.php",
+		"/Volumes/FBS-V3/fbs/app/Http/Controllers/Institution/DashboardController.php",
+		"/Volumes/FBS-V3/fbs/vendor/laravel/framework/src/Illuminate/Notifications/Notifiable.php",
+		"/Volumes/FBS-V3/fbs/vendor/laravel/framework/src/Illuminate/Notifications/HasDatabaseNotifications.php",
+		"/Volumes/FBS-V3/fbs/resources/views/institution/dashboard.blade.php",
+		"/Volumes/FBS-V3/fbs/app/Console/Commands/TestCommand.php",
+		"/Volumes/FBS-V3/fbs/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasRelationships.php",
+		"/Volumes/FBS-V3/fbs/vendor/laravel/framework/src/Illuminate/Notifications/DatabaseNotification.php",
+		"/Volumes/FBS-V3/fbs/resources/assets/sass/app.scss",
+		"/Volumes/FBS-V3/fbs/resources/views/institution/view.blade.php",
+		"/Volumes/FBS-V3/fbs/app/Listeners/Institution/BargainingUnitStatusListener.php",
+		"/Volumes/FBS-V3/fbs/resources/views/reporting/index.blade.php",
+		"/Volumes/FBS-V3/fbs/app/Http/Controllers/Api/Files/AWSS3Controller.php",
+		"/Volumes/FBS-V3/fbs/resources/views/institution/status.blade.php",
+		"/Volumes/FBS-V3/fbs/app/Http/Controllers/Institution/InstitutionController.php",
+		"/Volumes/FBS-V3/fbs/resources/views/institution/my-account/groups.blade.php",
+		"/Volumes/FBS-V3/fbs/resources/views/institution/library/agreements/upload/sections.blade.php",
+		"/Volumes/FBS-V3/fbs/storage/framework/views/5cc7742a3efd1a0772038f1d509477948f6c2c0e.php",
+		"/Volumes/FBS-V3/fbs/app/Database/Seeders/Users.php",
+		"/Volumes/FBS-V3/fbs/app/Jobs/Documents/Agreement/ProcessUploadedAgreementPages.php",
+		"/Volumes/FBS-V3/fbs/app/Database/Seeders/User/Roles.php",
+		"/Volumes/FBS-V3/fbs/app/Models/EmployeeGroup.php",
+		"/Volumes/FBS-V3/fbs/app/Util/MathUtils.php",
+		"/Volumes/FBS-V3/fbs/database/migrations/2019_08_07_044924_create_reportdata_avg_salries_full_time_inst_table.php",
+		"/Volumes/FBS-V3/fbs/app/Console/Commands/ImportAvgMedianSalariesReportInst.php",
+		"/Volumes/FBS-V3/fbs/app/Reports/Salaries/AverageSalariesFullTime.php",
+		"/Volumes/FBS-V3/fbs/resources/views/reporting/reports/salaries/average-salaries-full-time.blade.php",
+		"/Volumes/FBS-V3/fbs/app/Reports/Salaries/Charts/AverageSalariesFullTimeInst.php",
+		"/Volumes/FBS-V3/fbs/app/Models/User/InstitutionGroup.php",
+		"/Volumes/FBS-V3/fbs/app/Console/Commands/SeedStagingCommand.php",
+		"/Volumes/FBS-V3/fbs/seed-config.json",
+		"/Volumes/FBS-V3/fbs/app/Console/Commands/ImportFloorsCeilingsData.php",
+		"/Volumes/FBS-V3/fbs/app/Console/Commands/ImportABUsCommand.php",
+		"/Volumes/FBS-V3/fbs/resources/assets/js/components/value-bar.vue",
+		"/Volumes/FBS-V3/fbs/app/Models/DashboardNotification.php",
+		"/Volumes/FBS-V3/fbs/app/Http/Controllers/Admin/AnnoucementController.php",
+		"/Volumes/FBS-V3/fbs/app/Notifications/DashboardNotification.php",
+		"/Volumes/FBS-V3/fbs/app/Http/Controllers/HomeController.php",
+		"/Volumes/FBS-V3/fbs/app/Listeners/Institution/Library/AgreementUploadedListener.php",
+		"/Volumes/FBS-V3/fbs/database/migrations/2019_08_06_043542_create_agreement_bargaining_units_table.php",
+		"/Volumes/FBS-V3/fbs/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/BelongsTo.php",
+		"/Volumes/FBS-V3/fbs/app/Http/Controllers/Api/Components/Institution/BargainingUnitsController.php"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 120.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/esp8266.sublime-build",
+	"project": "12mile.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 320.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
